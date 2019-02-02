@@ -1,0 +1,241 @@
+.stepper-container, .stepper-panel{
+    margin-top: 7%;
+}
+.seller-container{
+	width: 80%;
+	margin: 0 auto; /* Center the DIV horizontally */
+	height: 100%;
+}
+.seller-header{
+	width: 100%;
+	position: absolute;
+	background: #337ab7;
+	height: 8%;
+	color: #fff;
+	left:0px;
+}
+.seller-footer{
+	width: 100%;
+	position: fixed;
+	background: #337ab7;
+	height: 8%;
+	color: #fff;
+	left:0px;
+}
+.seller-header{
+    top: 0;
+}
+.seller-footer{
+	bottom: 0;
+}
+.seller-nav {
+	height:100%
+}
+.seller-header nav a:hover{
+	background-color: #f4f4f4;
+}    
+/* Some more styles to beutify this example */
+.hamburger {
+    height: 100%;
+    position: fixed;
+	width:0;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: #337ab7;
+    overflow-x: auto;
+    transition: 0.5s;
+    padding-top: 60px;
+	z-index:1;
+}
+
+.hamburger a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+	z-index: 99;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.hamburger a:hover {
+    color: #f1f1f1;
+}
+
+.hamburger .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Latest compiled and minified CSS included as External Resource*/
+
+/* Optional theme */
+
+/*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
+ body {
+    margin-top:30px;
+}
+.stepwizard-step p {
+    margin-top: 0px;
+    color:#666;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.stepwizard-step button[disabled] {
+    /*opacity: 1 !important;
+    filter: alpha(opacity=100) !important;*/
+}
+.stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
+    opacity:1 !important;
+    color:#bbb;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+/*
+#news {
+    position:absolute;
+    width:50%;
+    height: 42%;
+    top: 8%;
+    left:0;
+    overflow: scroll;
+}
+#graph {
+    position:fixed;
+    width:50%;
+    height:42%;
+    top: 8%;
+    left:50%;
+}
+#calculator {
+    position:fixed;
+    width:50%;
+    height:42%;
+    top:50%;
+    left:0;
+    
+}
+#something {
+    position:fixed;
+    width:50%;
+    height:42%;
+    top:50%;
+    left:50%;
+    
+}
+#something, #calculator {
+    border-top: ridge;
+}
+#graph, #something {
+    border-left: ridge;
+}
+ul {
+	list-style:none;
+	padding: 0 16px;
+}
+.seller-blocks > li {
+	padding: 16px 0;
+    border-bottom: ridge;
+}
+*/
+
+/** new css**/
+.col {
+    /* flex: 1; */
+     /* padding: 16px;  */
+     margin-left:20px; 
+}
+.dashbord-column {
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    -webkit-column-rule: 1px outset black; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px outset black; /* Firefox */
+    column-rule: 1px outset black;
+}
+.border-right {
+    border-right: 1px solid #ddd;
+}
+/** new css **/
+
+.seller-heading {
+	font-size:30px;
+	position:absolute;
+	left:40%;
+	top:10px;
+}
+.seller-hamburger{
+	font-size:30px;
+	cursor:pointer;
+	float:left;
+	position:absolute;
+	top:5px;
+}
+/*
+.seller-statistics {
+	margin-top:60px;
+}
+.seller-stock {
+	padding-bottom:100px;
+}
+.seller-height {
+	height:300px;
+}
+*/
+/*
+.overflow-scroll {
+	overflow:scroll;
+}
+a {
+	text-decoration: none;
+}
+
+.trending_channel_value{
+    font-size:20px;
+}
+.trending_channel{
+    font-size:20px;
+    width:50%;
+}
+
+.trending_channel_row{
+    width:50%;
+}*/
