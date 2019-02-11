@@ -1,11 +1,35 @@
-$(document).ready(function () {
 
+/*This would trigger the date picker*/
+$(function(){
+    $('.order-creation.input-group.date').datepicker({
+        calendarWeeks: true,
+        todayHighlight: true,
+        autoclose: true
+    });  
+    });
+/*Trigger for Time adjuster*/
+ $('#timepicker').timepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+/*To trigger the select pickers on the page*/
+$('.selectpicker').selectpicker();
+
+/*This method binds events on load of the complete page*/
+$(window).load(function(){
+   
+})
+
+/*The document ready method to bind all events when the document is ready to serve*/
+$(document).ready(function () {
+     
+    /*To handle the stepper functionalities*/
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn');
 
     allWells.hide();
-
+    
     navListItems.click(function (e) {
         e.preventDefault();
         var $target = $($(this).attr('href')),
@@ -38,5 +62,21 @@ $(document).ready(function () {
         if (isValid) nextStepWizard.removeAttr('disabled').trigger('click');
     });
 
-    $('div.setup-panel div a.btn-success').trigger('click');
+    $('div.setup-panel div a.btn-success').trigger('click');  
+    /*Stepper code ends here!*/
+    
+    /*To display other operator text box*/
+    var other = $(".others-operator-name");
+    document.getElementsByName('new-order-select')[0].onchange = function() {
+        other.css('display', (this.value.toLowerCase()=='others')? 'block' : 'none');
+        if(this.value.toLowerCase() == 'others'){
+            $(".others-operator-name input").attr('required', 'required');    
+        }
+        else{
+            $(".others-operator-name input").removeAttr('required');
+        }
+        
+    };
+    
+    
 });

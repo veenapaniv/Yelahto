@@ -4,11 +4,39 @@
     <meta charset="utf-8">
     <title>Seller Management Application</title>
     <link rel="stylesheet" href="../css/dashboard.css" />
-    <link rel="stylesheet" href="../css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="../css/bootstrap-theme.min.css" />-->
+<!--    <link rel="stylesheet" href="../css/bootstrap.min.css" />-->
+<!--    <script src="../js/jquery-3.3.1.min.js"></script>-->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+    
+     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    
+    
+     
+  
+  
+    
+    
     <script type="text/javascript" src="../js/dashboard.js"></script>
+    
+
+    
+    <!--Including this version of jquery is a hack for calendar placement in the order creation page. Remove it asap -->
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.8.3.js'></script>
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js">
+    
+    
+    
     <script>
         function openHamburger() {
             document.getElementById("hamburgerClass").style.width = "250px";
@@ -16,8 +44,9 @@
 
         function closeHamburger() {
             document.getElementById("hamburgerClass").style.width = "0";
-        }
+        }         
     </script>
+ 
 </head>
 <body>
     <div class="seller-header">
@@ -38,207 +67,207 @@
     <!-- Stepper starts from here -->
     
     <div class="stepper-container container">
-    <div class="stepwizard">
-        <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
-<!--                <p><small>Shipper</small></p>-->
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-<!--                <p><small>Destination</small></p>-->
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-<!--                <p><small>Schedule</small></p>-->
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-<!--                <p><small>Cargo</small></p>-->
-            </div>
-            <div class="stepwizard-step col-xs-2"> 
-                <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
-<!--                <p><small>Cargo</small></p>-->
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-2"> 
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                </div>
+                <div class="stepwizard-step col-xs-2"> 
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                </div>
+                <div class="stepwizard-step col-xs-2"> 
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                </div>
+                <div class="stepwizard-step col-xs-2"> 
+                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                </div>
+                <div class="stepwizard-step col-xs-2"> 
+                    <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                </div>
             </div>
         </div>
-    </div>
     
-    <form role="form">
-        <div class="stepper-panel panel panel-primary setup-content" id="step-1">
-<!--
-            <div class="panel-heading">
-                 <h3 class="panel-title">Shipper</h3>
-            </div>
--->
-            <div class="panel-body">
-                <div class="form-group col-xs-3">
-<!--                    <label class="control-label">Operator Name</label>-->
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Operator Name" />
+        <form role="form">
+            <div class="stepper-panel panel panel-primary setup-content" id="step-1">
+                        <div class="panel-body">
+                                <div class="form-group col-sm-3">
+
+                                    <select id="new-order-select" class="selectpicker" required name="new-order-select" title="Choose the Operator Name">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option id="others">Others</option>
+                                    </select>
+
+                                </div>
+                                <div class="others-operator-name form-group col-xs-3">                    
+                                    <input maxlength="100" type="text" class="form-control" placeholder="Operator Name" />
+                                </div>
+
+
+                                <div class="form-group col-sm-3">
+                                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Order Reference" />
+                                </div>
+                                <div class="form-group col-sm-3"> 
+                                        <div class="order-creation input-group date">
+                                          <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                        </div>
+                <!--                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Delivery Date" />-->
+                                </div>
+                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                        </div>
                 </div>
-                <div class="form-group col-xs-3">
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Order Reference" />
-                </div>
-                <div class="form-group col-xs-3">                
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Delivery Date" />
-                </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-            </div>
-        </div>
-        
-        <div class="stepper-panel panel panel-primary setup-content" id="step-2">
-<!--
-            <div class="panel-heading">
-                 <h3 class="panel-title">Destination</h3>
-            </div>
--->
-            <div class="panel-body">
-                <div class="form-group col-xs-3">                    
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Service Type" />
-                </div>
-                <div class="form-group col-xs-3">                    
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Contact" />
-                </div>
-                <div class="form-group col-xs-3">
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Time" />
-                </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-            </div>
-        </div>
-        
-        <div class="stepper-panel panel panel-primary setup-content" id="step-3">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Include Children?</h3>
-            </div>
-            <div class="panel-body">
-                         
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-secondary active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
-                  </label>
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> No
-                  </label>                  
-                </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-            </div>
-        </div>
-        
-        <div class="stepper-panel panel panel-primary setup-content" id="step-4">
-<!--
-            <div class="panel-heading">
-                 <h3 class="panel-title">Cargo</h3>
-            </div>
--->
-            <div class="panel-body">
-                <div class="btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-secondary active">
-                    <input type="checkbox" checked autocomplete="off"> Veg
-                  </label>
-                  <label class="btn btn-secondary active">
-                    <input type="checkbox" autocomplete="off"> Non Veg
-                  </label>
-                  <label class="btn btn-secondary active">
-                    <input type="checkbox" autocomplete="off"> Jain
-                  </label>
-                  <label class="btn btn-secondary active">
-                    <input type="checkbox" autocomplete="off"> Swami
-                  </label>
-                </div>
-                <div class="container">
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Number of Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Non Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Jain Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Swami Pax" />
-                    </div>
-                   <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
-                    </div>
-                    <div class="form-group col-xs-2">
-                        <label class="control-label"></label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                    </div>
-                </div>
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-            </div>
-        </div>
-            <div class="stepper-panel panel panel-primary setup-content" id="step-5">
-<!--
-                    <div class="panel-heading">
-                         <h3 class="panel-title">Include Children?</h3>
-                    </div>
--->
+
+                <div class="stepper-panel panel panel-primary setup-content" id="step-2">
                     <div class="panel-body">
-                          <div class="form-group">
-                            <label class="control-label"></label>
-                            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Contact Number" />
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleFormControlTextarea1"></label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other Details"></textarea>
-                          </div>
-                        <button class="btn btn-success pull-right" type="submit">Finish!</button>
+                        <div class="form-group col-xs-3">                    
+        <!--                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Service Type" />-->
+                             <select id="service-type" class="selectpicker" name="service-type" required="true" title="Choose your Service Type">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>                      
+                            </select>
+                        </div>
+                        <div class="form-group col-xs-3">                    
+                            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Contact" />
+                        </div>
+                        <div class="form-group col-xs-3">
+        <!--                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Time" />-->
+                                <input id="timepicker" width="270" />             
+                        </div>
+                        
+                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
                     </div>
-            </div>
-        </div>
-    </form>
+                </div>
+                
+                <div class="stepper-panel panel panel-primary setup-content" id="step-3">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Include Children?</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> No
+                              </label>                  
+                            </div>
+                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                        </div>
+                </div>
+
+                <div class="stepper-panel panel panel-primary setup-content" id="step-4">
+                    <div class="panel-body">
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-secondary active">
+                                <input type="checkbox" checked autocomplete="off"> Veg
+                              </label>
+                              <label class="btn btn-secondary active">
+                                <input type="checkbox" autocomplete="off"> Non Veg
+                              </label>
+                              <label class="btn btn-secondary active">
+                                <input type="checkbox" autocomplete="off"> Jain
+                              </label>
+                              <label class="btn btn-secondary active">
+                                <input type="checkbox" autocomplete="off"> Swami
+                              </label>
+                        </div>
+                        <div class="container">
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Number of Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Non Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Jain Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Swami Pax" />
+                                </div>
+                               <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                </div>
+                        </div>
+                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                    </div>
+                </div>
+                <div class="stepper-panel panel panel-primary setup-content" id="step-5">
+    <!--
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Include Children?</h3>
+                        </div>
+    -->
+                        <div class="panel-body">
+                              <div class="form-group">
+                                <label class="control-label"></label>
+                                <input maxlength="200" type="text" required="required" class="form-control" placeholder="Delivery Contact Number" />
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other Details"></textarea>
+                              </div>
+                            <button class="btn btn-success pull-right" type="submit">Finish!</button>
+                        </div>
+                </div>            
+        </form>
 </div>
     
     
@@ -247,5 +276,10 @@
     <div class="seller-footer">
         <div class="seller-container" style="padding-top: 20px;">Copyright &copy; 2018 Seller Management Cooperation</div>
     </div>
+    <script>
+    $('#timepicker').timepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
 </body>
 </html>

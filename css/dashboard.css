@@ -209,6 +209,9 @@ ul {
 	position:absolute;
 	top:5px;
 }
+.others-operator-name{
+    display: none;
+}
 /*
 .seller-statistics {
 	margin-top:60px;
