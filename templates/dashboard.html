@@ -19,21 +19,16 @@
     <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     
     
-     
-  
-  
-    
-    
     <script type="text/javascript" src="../js/dashboard.js"></script>
     
 
     
     <!--Including this version of jquery is a hack for calendar placement in the order creation page. Remove it asap -->
-    <script type='text/javascript' src='https://code.jquery.com/jquery-1.8.3.js'></script>
+<!--    <script type='text/javascript' src='https://code.jquery.com/jquery-1.8.3.js'></script>-->
    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js">
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
     
     
     
@@ -146,12 +141,12 @@
                         </div>
                         <div class="panel-body">
 
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <div class="include-children btn-group btn-group-toggle" data-toggle="buttons">
                               <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Yes
                               </label>
                               <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                <input type="radio" name="options" id="option2" autocomplete="off" checked> No
                               </label>                  
                             </div>
                             <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
@@ -160,90 +155,106 @@
 
                 <div class="stepper-panel panel panel-primary setup-content" id="step-4">
                     <div class="panel-body">
-                        <div class="btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-secondary active">
-                                <input type="checkbox" checked autocomplete="off"> Veg
+<!--
+                        <div class="checkbox pax-checkbox" data-toggle="buttons">
+                              <label class="btn btn-secondary">
+                                <input id="veg" class="veg-pax-checkbox" type="checkbox" autocomplete="off"> Veg
                               </label>
                               <label class="btn btn-secondary active">
-                                <input type="checkbox" autocomplete="off"> Non Veg
+                                <input id="non-veg" class="non-veg-pax-checkbox" type="checkbox" autocomplete="off"> Non Veg
                               </label>
-                              <label class="btn btn-secondary active">
-                                <input type="checkbox" autocomplete="off"> Jain
+                              <label class="btn btn-secondary">
+                                <input id="jain" class="jain-pax-checkbox" type="checkbox" autocomplete="off"> Jain
                               </label>
-                              <label class="btn btn-secondary active">
-                                <input type="checkbox" autocomplete="off"> Swami
+                              <label class="btn btn-secondary">
+                                <input id="swami" class="swami-pax-checkbox" type="checkbox" autocomplete="off"> Swami
                               </label>
                         </div>
-                        <div class="container">
+-->
+                        
+                            <div class="checkbox-inline pax-checkbox">
+                              <label class="btn btn-secondary"><input id="veg" type="checkbox" value="">Veg</label>
+                            </div>
+                            <div class="checkbox-inline pax-checkbox">
+                              <label class="btn btn-secondary"><input id="non-veg" type="checkbox" value="" checked>Non Veg</label>
+                            </div>
+                            <div class="checkbox-inline pax-checkbox">
+                              <label><input id="jain" type="checkbox" value="">Jain</label>
+                            </div>
+                            <div class="checkbox-inline pax-checkbox">
+                              <label><input id="swami" type="checkbox" value="">Swami</label>
+                            </div>
+                     
+                        <div class="container" id="veg-pax">
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Number of Veg Pax" />
+                                    <input maxlength="200" type="text" id="veg-pax-input" class="form-control" placeholder="Number of Veg Pax" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="veg-pax-price" class="form-control" placeholder="Price" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                    <input maxlength="200" type="text" id="veg-child-pax" class="child-pax form-control" placeholder="Child Veg Pax" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                                </div>
-                        </div>
-                        <div class="container">
-                                <div class="form-group col-xs-2">
-                                    <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Non Veg Pax" />
-                                </div>
-                                <div class="form-group col-xs-2">
-                                    <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
-                                </div>
-                                <div class="form-group col-xs-2">
-                                    <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
-                                </div>
-                                <div class="form-group col-xs-2">
-                                    <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="veg-child-price" class="form-control" placeholder="Price" />
                                 </div>
                         </div>
-                        <div class="container">
+                        <div class="container" id="non-veg-pax">
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Jain Pax" />
+                                    <input maxlength="200" type="text" id="non-veg-pax-input" class="form-control" placeholder="Non Veg Pax" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="non-veg-pax-price" class="form-control" placeholder="Price" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                    <input maxlength="200" type="text" id="non-veg-child-pax" class="child-pax form-control" placeholder="Child Veg Pax" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="non-veg-child-price" class="form-control" placeholder="Price" />
                                 </div>
                         </div>
-                        <div class="container">
+                        <div class="container" id="jain-pax">
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Swami Pax" />
+                                    <input maxlength="200" type="text" id="jain-pax-input" class="form-control" placeholder="Jain Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" id="jain-pax-price" class="form-control" placeholder="Price" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" id="jain-child-pax" class="child-pax form-control" placeholder="Child Veg Pax" />
+                                </div>
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" id="jain-child-price" class="form-control" placeholder="Price" />
+                                </div>
+                        </div>
+                        <div class="container" id="swami-pax">
+                                <div class="form-group col-xs-2">
+                                    <label class="control-label"></label>
+                                    <input maxlength="200" type="text" id="swami-pax-input" class="form-control" placeholder="Swami Pax" />
                                 </div>
                                <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="swami-pax-price" class="form-control" placeholder="Price" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Child Veg Pax" />
+                                    <input maxlength="200" type="text" id="swami-child-pax" class="child-pax form-control" placeholder="Child Veg Pax" />
                                 </div>
                                 <div class="form-group col-xs-2">
                                     <label class="control-label"></label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Price" />
+                                    <input maxlength="200" type="text" id="swami-child-price" class="form-control" placeholder="Price" />
                                 </div>
                         </div>
                         <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
