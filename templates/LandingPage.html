@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="../js/landingPage.js"></script>
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/Style.css">
+<!--    <script type="text/javascript" src="../js/landingPage.js"></script>-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="path_to/jquery.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/twbs-pagination@1.4.1/jquery.twbsPagination.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row" >
+    <div class="col-sm-2" >
+        <div class="container-fluid logo"><a class="logoImage"  href="#"><img src="../images/LOGO v2.png" class="img-circle" alt="Cinque Terre"></a></div>
+        <div class="container-fluid sidebarbuttons">
+            <p><button type="button" class="btn btn-success btn-lg btn-block"><i class="glyphicon glyphicon-pencil"></i>Orders</button></p>
+            <p><button type="button" class="btn btn-warning btn-lg btn-block" ><i class="glyphicon glyphicon-list-alt"></i> Invoices </button></p></div>
+            
+    </div>
+      
+    <div class="col-sm-10">
+        <div class="container-fluid NewOrder" >
+            <p><i class="glyphicon glyphicon-user" float="right"></i></p>
+            <p><button type="button" class="btn btn-success btnNewOrder btn-lg" ><i class="glyphicon glyphicon-pencil"></i>New Order</button></p></div>
+        <div class="container-fluid Search" >
+            <div class="row rowheading">
+                <div class="col-sm-3" ><h5>Select Tour Operator</h5></div>
+                <div class="col-sm-2" ><h5>From date</h5></div>
+                <div class="col-sm-2" ><h5>To Date</h5></div>
+                <div class="col-sm-3" ><h5>Order ref.number</h5></div>
+                <div class="col-sm-2" ></div>
+            </div>
+            <div class="row rowdata">
+                <div class="col-sm-3" >
+                    <div class="LandingPage-SelectOPerator">
+                        <select id="new-order-select" class="selectpicker" required name="new-order-select" title="Choose the Operator Name">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option id="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-sm-2" >
+                    <div class="LandingPage-FromDate input-group date">
+                        <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                </div>
+                
+                <div class="col-sm-2" >
+                        <div class="LandingPage-ToDate input-group date">
+                            <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                </div>
+                <div class="col-sm-3" ><input type="text"></div>
+                <div class="col-sm-2" ><a href="#!" class="btn btnSearch btn-primary">Search</a></div>
+            </div>
+        </div>
+        
+        <div class="container-fluid history" >
+            
+        </div>
+                
+            
+                
+        <div class="container-fluid Paginatn" >
+            <ul id="pagination-demo" class="pagination-lg pull-right"></ul>
+            <div id="page-content" class="page-content"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+            
