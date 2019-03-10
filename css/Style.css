@@ -12,17 +12,52 @@
     
 }
 
-.glyphicon.glyphicon-user {
-    font-size: 150%;
+
+.icon
+{
     float: right;
-    
+    margin: 3%;
 }
+
+@media screen and (max-width: 650px) {
+  body {
+    float: left;
+  }
+}
+
+.seller-header{
+	width: 100%;
+	position: absolute;
+	background: #337ab7;
+	height: 8%;
+	color: #fff;
+	left:0px;
+}
+.seller-footer{
+	width: 100%;
+	position: fixed;
+	background: #337ab7;
+	height: 8%;
+	color: #fff;
+	left:0px;
+    }
+
+.seller-header{
+    top: 0;
+    }
+
+.seller-footer{
+	bottom: 0;
+    }
+
+
 
 
 .btnNewOrder
 {
-    font-size: 200%;
-    
+    font-size:180%;
+
+    float: right;
     margin-top: 8%;
     margin-bottom: 1%;
     margin-right: 0%;

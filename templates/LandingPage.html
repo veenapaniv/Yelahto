@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -29,17 +30,38 @@
   <div class="row" >
     <div class="col-sm-2" >
         <div class="container-fluid logo"><a class="logoImage"  href="#"><img src="../images/LOGO v2.png" class="img-circle" alt="Cinque Terre"></a></div>
-        <div class="container-fluid sidebarbuttons">
-            <p><button type="button" class="btn btn-success btn-lg btn-block"><i class="glyphicon glyphicon-pencil"></i>Orders</button></p>
-            <p><button type="button" class="btn btn-warning btn-lg btn-block" ><i class="glyphicon glyphicon-list-alt"></i> Invoices </button></p></div>
-            
-    </div>
+     </div>   
       
     <div class="col-sm-10">
-        <div class="container-fluid NewOrder" >
-            <p><i class="glyphicon glyphicon-user" float="right"></i></p>
-            <p><button type="button" class="btn btn-success btnNewOrder btn-lg" ><i class="glyphicon glyphicon-pencil"></i>New Order</button></p></div>
+        <div class="container-fluid icon" >
+             <div class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span><i class="fas fa-user"></i></span> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                </ul>
+            </div>
+           
+        </div>
+     
+        <div class="container-fluid neworder" >
+            
+            <p><button type="button" class="btn btn-success btnNewOrder btn-xs" float="right" ><i class="glyphicon glyphicon-pencil"></i>New Order</button></p>
+          </div>
+    </div>
+    </div>
+    <div class="row" >  
+        <div class="col-sm-2" >
+            <div class="container-fluid sidebarbuttons">
+                <p><button type="button" class="btn btn-success btn-lg btn-block"><i class="glyphicon glyphicon-pencil"></i>Orders</button></p>
+                <p><button type="button" class="btn btn-warning btn-lg btn-block" ><i class="glyphicon glyphicon-list-alt"></i> Invoices </button></p>
+            </div>
+        </div>       
+    
+    
+      <div class="col-sm-10">
         <div class="container-fluid Search" >
+<!--
             <div class="row rowheading">
                 <div class="col-sm-3" ><h5>Select Tour Operator</h5></div>
                 <div class="col-sm-2" ><h5>From date</h5></div>
@@ -47,8 +69,10 @@
                 <div class="col-sm-3" ><h5>Order ref.number</h5></div>
                 <div class="col-sm-2" ></div>
             </div>
+-->
             <div class="row rowdata">
                 <div class="col-sm-3" >
+                    <label>Select Tour Operator</label>
                     <div class="LandingPage-SelectOPerator">
                         <select id="new-order-select" class="selectpicker" required name="new-order-select" title="Choose the Operator Name">
                             <option>1</option>
@@ -59,18 +83,29 @@
                     </div>
                 </div>
                 <div class="form-group col-sm-2" >
+                    <label>From date</label>
                     <div class="LandingPage-FromDate input-group date">
                         <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                     </div>
                 </div>
                 
                 <div class="col-sm-2" >
+                        <label>To date</label>
                         <div class="LandingPage-ToDate input-group date">
                             <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                         </div>
                 </div>
-                <div class="col-sm-3" ><input type="text"></div>
-                <div class="col-sm-2" ><a href="#!" class="btn btnSearch btn-primary">Search</a></div>
+                
+                
+                <div class="col-sm-3" >
+                    <label>Order ref.number</label>
+                    <input  type="text" required="required" class="form-control" placeholder="Enter Order Ref" />
+                </div>
+                
+                 
+                <div class="col-sm-2" >
+                    <label></label>
+                    <a href="#!" class="btn btnSearch btn-primary">Search</a></div>
             </div>
         </div>
         
@@ -85,9 +120,13 @@
             <div id="page-content" class="page-content"></div>
         </div>
     </div>
-  </div>
+    </div>
 </div>
 
+    <div class="seller-footer">
+        <div class="seller-container" style="padding-top: 20px;">Copyright &copy; 2018 Seller Management Cooperation</div>
+    </div>
+    
 </body>
 </html>
             
