@@ -1,0 +1,20 @@
+{
+  "jwt": "xyzANDLONGSTRING",
+  "operators": [
+    {
+      "idOperator": 1,
+      "operaotorName": "Operator1"
+    },
+    {
+      "idOperator": 2,
+      "operaotorName": "Operator2"
+    },
+    {
+      "idOperator": 3,
+      "operaotorName": "Operator3"
+    }
+  ],
+  "language": "ES",
+  "currency": "EUR",
+  "status": "OK"
+}
