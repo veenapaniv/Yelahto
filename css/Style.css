@@ -86,3 +86,36 @@
     text-align-last: right;
 }
 
+.new-order-dialog {
+    width: 800px;
+}
+
+/* The below media query is for mobile screens*/
+@media only screen and (max-width: 600px) {
+  .new-order-dialog{
+        width: 350px;
+    }
+}
+/*Below media query is for screen bigger than mobiles and smaller than desktops; such as tablets */
+@media only screen and (max-width:768px) {
+  .new-order-dialog{
+        width: 800px;
+    }
+}
+
+/*Below media query is for laptop or desktop screens*/
+@media (min-width: 900px)
+{
+    .new-order-dialog{
+    width: 1200px;
+    } 
+}
+
+.yelahto-pagination{
+    margin-bottom: 5%;
+}
+/*
+.new-order-dialog{
+    width: 1200px;
+}
+*/

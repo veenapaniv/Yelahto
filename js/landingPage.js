@@ -18,9 +18,9 @@ $(function(){
 $(window).load(function(){
         //$(".btnNewOrder").addEventListener("click", NewOrder, false)
         //document.getElementsByClassName("btnNewOrder").addEventListener("click", NewOrder, false); 
-        $(".btnNewOrder").click(function(){
-            window.location.assign("http://localhost/Yelahto/templates/orderCreation.html");
-        });
+//        $(".btnNewOrder").click(function(){
+//            window.location.assign("http://localhost/Yelahto/templates/OrderCreation.html");
+//        });
         
 });
 
